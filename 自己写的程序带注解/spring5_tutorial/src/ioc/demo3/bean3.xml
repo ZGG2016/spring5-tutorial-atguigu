@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--3 有参数构造注入属性-->
+    <bean id="orders" class="ioc.demo3.Orders">
+<!--        通过有参数构造的参数名称-->
+<!--        <constructor-arg name="orderName" value="电脑"/>-->
+<!--        <constructor-arg name="orderAddress" value="北京市"/>-->
+
+<!--        通过有参数构造的参数索引-->
+        <constructor-arg index="0" value="电脑"/>
+        <constructor-arg index="1" value="北京市"/>
+    </bean>
+</beans>

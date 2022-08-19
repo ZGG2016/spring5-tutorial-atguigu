@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="book" class="ioc.demo13.Book" scope="singleton">
+        <property name="bookName" value="孙子兵法"/>
+    </bean>
+
+    <bean name="student" class="ioc.demo13.Student" scope="prototype">
+        <property name="studentName" value="张三"/>
+    </bean>
+</beans>

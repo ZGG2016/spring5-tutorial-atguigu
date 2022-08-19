@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- 1.引入依赖
+         2.引入名称空间   xmlns:context......
+         3. 开启组件扫描
+            - 如果扫描多个包，多个包使用逗号隔开  <context:component-scan base-package="ioc.demo17.dao,ioc.demo17.service"/>
+            - 扫描包上层目录
+         4. 创建类，在类上面添加创建对象注解
+    -->
+    <context:component-scan base-package="ioc.demo17"/>
+
+
+<!--    &lt;!&ndash;示例 1-->
+<!--     use-default-filters="false" 表示现在不使用默认 filter，自己配置 filter-->
+<!--     context:include-filter ，设置扫描哪些内容-->
+<!--    &ndash;&gt;-->
+<!--    <context:component-scan base-package="ioc.demo17" use-default-filters="false">-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>-->
+<!--    </context:component-scan>-->
+
+<!--    &lt;!&ndash;示例 2-->
+<!--       下面配置扫描包所有内容-->
+<!--       context:exclude-filter： 设置哪些内容不进行扫描-->
+<!--       &ndash;&gt;-->
+<!--    <context:component-scan base-package="ioc.demo17" >-->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Component"/>-->
+<!--    </context:component-scan>-->
+</beans>

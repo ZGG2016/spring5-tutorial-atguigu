@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="student" class="ioc.demo9.Student">
+        <!--数组类型属性注入-->
+        <property name="arrs">
+            <array>
+                <value>java课程</value>
+                <value>php课程</value>
+            </array>
+        </property>
+
+        <!--list 类型属性注入-->
+        <property name="lsts">
+            <list>
+                <value>hadoop</value>
+                <value>spark</value>
+            </list>
+        </property>
+
+        <!--map 类型属性注入-->
+        <property name="maps">
+            <map>
+                <entry key="k1" value="v1"/>
+                <entry key="k2" value="v2"/>
+            </map>
+        </property>
+
+        <!--set 类型属性注入-->
+        <property name="sets">
+            <set>
+                <value>mysql</value>
+                <value>oracle</value>
+            </set>
+        </property>
+    </bean>
+</beans>

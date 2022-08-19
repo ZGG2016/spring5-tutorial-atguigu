@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    2. 在 spring 配置文件配置对象创建，配置属性注入-->
+    <bean id="book" class="ioc.demo2.Book">
+        <!--使用 property 完成属性注入
+         name：类里面属性名称
+         value：向属性注入的值
+         -->
+        <property name="bookName" value="书1" />
+        <property name="bookAuthor" value="作者1" />
+    </bean>
+</beans>

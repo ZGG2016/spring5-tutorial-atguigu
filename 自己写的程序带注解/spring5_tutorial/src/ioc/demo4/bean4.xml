@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    2. 添加 p 名称空间在配置文件中  xmlns:p=... -->
+<!--    3. 属性注入-->
+    <bean id="book" class="ioc.demo4.Book" p:bookName="书名1" p:bookAuthor="作者1">
+    </bean>
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    1. 注入null-->
+<!--    <bean id="orders" class="ioc.demo5.Orders">-->
+<!--        <property name="orderName" value="订单1" />-->
+<!--        <property name="orderAddress">-->
+<!--            <null />-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    2. 注入特殊符号
+           - 把<>进行转义 &lt; &gt;
+           - 把带特殊符号内容写到 CDATA
+-->
+    <bean id="orders" class="ioc.demo5.Orders">
+        <property name="orderName" value="订单1" />
+        <property name="orderAddress" value="&lt;&lt;南京&gt;&gt;"/>
+<!--        <property name="orderAddress">-->
+<!--            <value><![CDATA[<<南京>>]]></value>-->
+<!--        </property>-->
+    </bean>
+</beans>

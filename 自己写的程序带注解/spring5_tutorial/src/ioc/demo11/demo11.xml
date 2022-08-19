@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    1. 在 spring 配置文件中引入名称空间 util-->
+<!--    2. 使用 util 标签完成 list 集合注入提取-->
+
+<!--    2.1 提取 list 集合类型属性注入-->
+    <util:list id="booklist">
+        <value>易筋经</value>
+        <value>九阴真经</value>
+        <value>九阳神功</value>
+    </util:list>
+
+    <!--2 提取 list 集合类型属性注入使用-->
+    <bean name="book" class="ioc.demo11.Book">
+        <property name="bookName" ref="booklist" />
+    </bean>
+
+    <bean name="student" class="ioc.demo11.Student">
+        <property name="courseName" ref="booklist" />
+    </bean>
+
+</beans>
